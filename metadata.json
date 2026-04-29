@@ -1,5 +1,6 @@
 {
   "owner": "obi1kenobi",
   "name": "cargo-semver-checks-action",
-  "visibility": ""
+  "visibility": "internal",
+  "description": "A GitHub Action for running cargo-semver-checks"
 }

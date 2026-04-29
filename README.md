@@ -1,5 +1,7 @@
 # obi1kenobi/cargo-semver-checks-action
 
+A GitHub Action for running cargo-semver-checks
+
 Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/obi1kenobi/cargo-semver-checks-action](https://github.com/obi1kenobi/cargo-semver-checks-action).
 
 ## Versions
