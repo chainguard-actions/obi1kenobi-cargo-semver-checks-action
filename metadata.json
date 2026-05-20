@@ -1,7 +1,0 @@
-{
-  "owner": "obi1kenobi",
-  "name": "cargo-semver-checks-action",
-  "visibility": "internal",
-  "description": "A GitHub Action for running cargo-semver-checks",
-  "block_publish": false
-}
