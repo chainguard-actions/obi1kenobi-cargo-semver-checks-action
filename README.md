@@ -8,7 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v2.8 | [`v2.8`](https://github.com/chainguard-actions/obi1kenobi-cargo-semver-checks-action/tree/v2.8) | — |
+| v2.8 | [`v2.8`](https://github.com/chainguard-actions/obi1kenobi-cargo-semver-checks-action/tree/v2.8) | [`5b298c9`](https://github.com/obi1kenobi/cargo-semver-checks-action/commit/5b298c9520f7096a4683c0bd981a7ac5a7e249ae) |
 
 ## Privacy
 
