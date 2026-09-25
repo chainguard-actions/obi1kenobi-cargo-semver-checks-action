@@ -1,0 +1,26 @@
+name: Test manual rust-toolchain mode
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install Rust stable toolchain manually
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable --profile minimal
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+
+      - name: Run cargo-semver-checks with manual toolchain
+        id: action
+        uses: .
+        with:
+          manifest-path: tests/fixtures/basic-crate/Cargo.toml
+          baseline-root: tests/fixtures/baseline-crate
+          rust-toolchain: manual
+
+      - name: Assert action succeeded with manual toolchain
+        run: |
+          echo "Action completed successfully with manual toolchain — no semver violations detected"
+          echo "PASS"

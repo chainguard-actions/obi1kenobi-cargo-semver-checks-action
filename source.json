@@ -1,0 +1,11 @@
+{
+  "owner": "obi1kenobi",
+  "repo": "cargo-semver-checks-action",
+  "version": "v2.8",
+  "commit_sha": "5b298c9520f7096a4683c0bd981a7ac5a7e249ae",
+  "url": "https://github.com/obi1kenobi/cargo-semver-checks-action",
+  "policy_sha": "d636be7e43ef829af6e853da6b3c7566db9f72fe",
+  "test_policy_sha": "843adf9e4b8f85d0c08b27b9d0b09dd094b54702",
+  "test_agent_version": "2",
+  "harden_agent_version": "2"
+}
