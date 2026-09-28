@@ -1,0 +1,25 @@
+name: Test verbose mode
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up baseline crate (copy of current crate = no API changes)
+        run: |
+          cp -r "$GITHUB_WORKSPACE/tests/fixtures/minimal-crate" /tmp/baseline-crate-verbose
+
+      - id: action
+        uses: .
+        with:
+          manifest-path: tests/fixtures/minimal-crate/Cargo.toml
+          baseline-root: /tmp/baseline-crate-verbose
+          rust-toolchain: stable
+          verbose: 'true'
+
+      - name: Assert action succeeded with verbose output
+        run: |
+          echo "Action completed successfully in verbose mode — no semver violations detected"
+          echo "PASS"

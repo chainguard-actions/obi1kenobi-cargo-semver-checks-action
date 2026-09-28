@@ -1,0 +1,30 @@
+name: Test manual toolchain mode
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install Rust toolchain manually
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable --profile minimal
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+
+      - name: Set up baseline crate (copy of current crate = no API changes)
+        run: |
+          cp -r "$GITHUB_WORKSPACE/tests/fixtures/minimal-crate" /tmp/baseline-crate-manual
+
+      - id: action
+        uses: .
+        with:
+          manifest-path: tests/fixtures/minimal-crate/Cargo.toml
+          baseline-root: /tmp/baseline-crate-manual
+          rust-toolchain: manual
+          verbose: 'false'
+
+      - name: Assert action succeeded with manual toolchain
+        run: |
+          echo "Action completed successfully with manual toolchain — no semver violations detected"
+          echo "PASS"

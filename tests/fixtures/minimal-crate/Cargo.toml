@@ -1,0 +1,9 @@
+[package]
+name = "semver-checks-test-crate"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "semver_checks_test_crate"
+
+[dependencies]

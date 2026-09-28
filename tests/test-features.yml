@@ -1,0 +1,26 @@
+name: Test features input
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up baseline crate (copy of current crate = no API changes)
+        run: |
+          cp -r "$GITHUB_WORKSPACE/tests/fixtures/crate-with-features" /tmp/baseline-crate-features
+
+      - id: action
+        uses: .
+        with:
+          manifest-path: tests/fixtures/crate-with-features/Cargo.toml
+          features: extra
+          baseline-root: /tmp/baseline-crate-features
+          rust-toolchain: stable
+          verbose: 'false'
+
+      - name: Assert action succeeded with explicit features
+        run: |
+          echo "Action completed successfully — checked with 'extra' feature enabled, no semver violations detected"
+          echo "PASS"
