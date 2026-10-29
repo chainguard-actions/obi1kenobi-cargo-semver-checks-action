@@ -6,10 +6,10 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 ## Versions
 
-| Version | Tag | Upstream commit |
-|---------|-----|-----------------|
-| v2.8 | [`v2.8`](https://github.com/chainguard-actions/obi1kenobi-cargo-semver-checks-action/tree/v2.8) | [`5b298c9`](https://github.com/obi1kenobi/cargo-semver-checks-action/commit/5b298c9520f7096a4683c0bd981a7ac5a7e249ae) |
-| v2.9 | [`v2.9`](https://github.com/chainguard-actions/obi1kenobi-cargo-semver-checks-action/tree/v2.9) | [`6b69fcf`](https://github.com/obi1kenobi/cargo-semver-checks-action/commit/6b69fcf40e9b5fb17adeb57e4b6ecd020649a239) |
+| Version | Tag | Upstream commit | Hardening report |
+|---------|-----|-----------------|------------------|
+| v2.8 | [`v2.8`](https://github.com/chainguard-actions/obi1kenobi-cargo-semver-checks-action/tree/v2.8) | [`5b298c9`](https://github.com/obi1kenobi/cargo-semver-checks-action/commit/5b298c9520f7096a4683c0bd981a7ac5a7e249ae) | [`HARDENING.md`](https://github.com/chainguard-actions/obi1kenobi-cargo-semver-checks-action/blob/v2.8/HARDENING.md) |
+| v2.9 | [`v2.9`](https://github.com/chainguard-actions/obi1kenobi-cargo-semver-checks-action/tree/v2.9) | [`6b69fcf`](https://github.com/obi1kenobi/cargo-semver-checks-action/commit/6b69fcf40e9b5fb17adeb57e4b6ecd020649a239) | [`HARDENING.md`](https://github.com/chainguard-actions/obi1kenobi-cargo-semver-checks-action/blob/v2.9/HARDENING.md) |
 
 ## Privacy
 
