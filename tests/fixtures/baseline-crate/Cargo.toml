@@ -1,7 +1,0 @@
-[package]
-name = "semver-test-crate"
-version = "1.0.0"
-edition = "2021"
-
-[lib]
-name = "semver_test_crate"

@@ -4,8 +4,13 @@
   "version": "v2.8",
   "commit_sha": "5b298c9520f7096a4683c0bd981a7ac5a7e249ae",
   "url": "https://github.com/obi1kenobi/cargo-semver-checks-action",
-  "policy_sha": "d636be7e43ef829af6e853da6b3c7566db9f72fe",
+  "policy_sha": "374911c4be584df24e6da57af2d990570ef0f859",
   "test_policy_sha": "843adf9e4b8f85d0c08b27b9d0b09dd094b54702",
   "test_agent_version": "2",
-  "harden_agent_version": "2"
+  "harden_agent_version": "2",
+  "dist_artifact": {
+    "gcs_uri": "gs://patch-actions-node-artifacts/dist-artifacts/obi1kenobi/cargo-semver-checks-action/v2.8/sha256-87d4319e2dcf68f738eb8980b21cdaf0f578f9b6db40328d48387f04d26d0cde.tar.gz",
+    "sha256": "87d4319e2dcf68f738eb8980b21cdaf0f578f9b6db40328d48387f04d26d0cde",
+    "size_bytes": 505739
+  }
 }
